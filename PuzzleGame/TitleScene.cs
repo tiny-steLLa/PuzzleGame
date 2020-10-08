@@ -10,8 +10,8 @@ namespace PuzzleGame
     {
         protected asd.Layer2D ButtonLayer;
         protected asd.Layer2D BackgroundLayer;
-        private int WhichPicture = 0;//選択画像、シーンが変わっても状態を記憶させる
-        private bool IsReverse = false;//操作反転、上同様
+        private static int WhichPicture = 0;//選択画像、シーンが変わっても状態を記憶させる
+        private static bool IsReverse = false;//操作反転、上同様
         int PictureNum;//画像総数（自分で用意したのも含む）
         private int FontSize;
         private Dictionary<int, string> PictureTable;
@@ -21,6 +21,7 @@ namespace PuzzleGame
         {
             PictureTable = new Dictionary<int, string>()
             {
+                // TODO: enum利用
                 {0,"画像選択\n=またたび" },
                 {1, "画像選択\n=ししゃも"},
                 {2, "画像選択\n=puzzle" },
